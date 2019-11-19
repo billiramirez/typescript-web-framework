@@ -1,7 +1,9 @@
 interface UserProps {
-  name: string;
-  age: number;
+  name?: string;
+  age?: number;
 }
+
+type Callback = () => {}; // Instead of using type anotation, let's use the => Type alias
 
 export class User {
   constructor(private data: UserProps) {}
@@ -10,5 +12,9 @@ export class User {
     return this.data[propName];
   }
 
-  set() {}
+  set(update: UserProps): void {
+    Object.assign(this.data, update);
+  }
+
+  on(eventName: string, callback: Callback) {}
 }
