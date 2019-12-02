@@ -122,7 +122,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+}); // interface ModelForView {
+//   on(eventName: string, callback: () => void): void;
+// }
 
 var View =
 /** @class */
